@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root{
+            --navigation-color:rgb(144, 49, 227);
+            --text-color:white;
+            --secondary-color:rgb(70, 46, 99);
+
+            
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: var(--secondary-color);
+        }
+        ul{
+            background-color: var(--navigation-color);
+            display: flex;
+            justify-content: space-around;
+            font-size: 3em;
+            list-style-type: none;
+        }
+        a{
+            color: var(--text-color);
+            text-decoration: none;
+
+        }
+        
+    </style>
+    <title>color website</title>
+</head>
+<body>
+    <!-- Create a multicolor website which can change color using CSS Variables -->
+    <div class="navbar">
+        <ul>
+            <li class="home"><a href="Home">Home</a></li>
+            <li><a href="About">About</a></li>
+            <li><a href="Contact">Contact</a></li>
+        </ul>
+    </div>
+    
+</body>
+</html>

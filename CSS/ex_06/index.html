@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>navbar using flex</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                width: 100vw;
+                height: 100vh;
+                font-family: sans-serif;
+            }
+            .navbar {
+                height: 100px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .navbar .logo img {
+                height: 55px;
+            }
+            .navbar ul {
+                display: flex;
+                gap: 1em;
+            }
+            .navbar ul li {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                color: #322f2f;
+            }
+            .right {
+                display: none;
+            }
+            @media (max-width: 980px) {
+                .navbar {
+                    justify-content: space-between;
+                    padding: 0em 3em;
+                }
+                .navbar ul {
+                    display: none;
+                }
+                .right {
+                    display: flex;
+                    align-items: center;
+                    gap: 1em;
+                }
+            }
+            .hero{
+                width: 70%;
+                margin: 0 auto;
+                padding: 3em;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 2em;
+            }
+            .desc{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2em;
+                /* text-align: justify; */
+            }
+            .desc h1{
+                font-size: 2.65em;
+                font-weight: lighter;
+                display: flex;
+                align-items: baseline;
+                gap: 0.2em;
+            }
+            .desc h1 img{
+                width: 100px;
+                height: 32px;
+            }
+            .desc p{
+                font-size: 2em;
+            }
+            button{
+                font-weight: 900;
+                color: aliceblue;
+                border-radius: 2px;
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo">
+                <img
+                    src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp"
+                    alt="logo"
+                />
+            </div>
+            <div class="navlist">
+                <ul>
+                    <li>
+                        <span>Products</span
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="21px"
+                            viewBox="0 -960 960 960"
+                            width="24px"
+                            fill="0"
+                        >
+                            <path
+                                d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
+                            />
+                        </svg>
+                    </li>
+                    <li>
+                        <span>For business</span
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="21px"
+                            viewBox="0 -960 960 960"
+                            width="24px"
+                            fill="0"
+                        >
+                            <path
+                                d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
+                            />
+                        </svg>
+                    </li>
+                    <li>
+                        <span>Resources</span
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="21px"
+                            viewBox="0 -960 960 960"
+                            width="24px"
+                            fill="0"
+                        >
+                            <path
+                                d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
+                            />
+                        </svg>
+                    </li>
+                    <li>
+                        <span>Support</span
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="21px"
+                            viewBox="0 -960 960 960"
+                            width="24px"
+                            fill="0"
+                        >
+                            <path
+                                d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
+                            />
+                        </svg>
+                    </li>
+                    <li>
+                        <span>Our company</span
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="21px"
+                            viewBox="0 -960 960 960"
+                            width="24px"
+                            fill="0"
+                        >
+                            <path
+                                d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"
+                            />
+                        </svg>
+                    </li>
+                    <li>
+                        <img
+                            src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png"
+                            alt=""
+                        />
+                    </li>
+                    <li>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="22px"
+                            viewBox="0 -960 960 960"
+                            width="29px"
+                            fill=""
+                        >
+                            <path
+                                d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+                            />
+                        </svg>
+                    </li>
+                </ul>
+                <div class="right">
+                    <span>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="22px"
+                            viewBox="0 -960 960 960"
+                            width="29px"
+                            fill=""
+                        >
+                            <path
+                                d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+                            />
+                        </svg>
+                    </span>
+                    <span>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="40px"
+                            viewBox="0 -960 960 960"
+                            width="30px"
+                            fill="0"
+                        >
+                            <path
+                                d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"
+                            />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="desc">
+                <h1>
+                    <span>
+                        Download <strong>UltraEdit</strong> for Windows 
+                    </span>
+                    <img src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt="review">
+                </h1>
+                <p>
+                    Download and try UltraEdit before you buy it! This download includes the full Windows version of the text editor. 
+                </p>
+                <button>
+                    Download Mac or Linux version
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
