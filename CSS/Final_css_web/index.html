@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            :root {
+                --primary-color: #6366f0;
+                --secondary-color: #b5b5b5;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                width: 100vw;
+                height: 100vh;
+                font-family: "Inter", sans-serif;
+            }
+            header {
+                max-width: 1312px;
+                height: 126px;
+                padding: 1em;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .logo {
+                width: 220px;
+                height: 2em;
+                display: flex;
+                gap: 0.5em;
+                align-items: center;
+            }
+            .logo img {
+                width: 2em;
+                height: 2em;
+            }
+            .logo span {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            .navbar ul {
+                display: flex;
+                list-style-type: none;
+                gap: 1.5em;
+            }
+            a {
+                text-decoration: none;
+                color: #718096;
+                font-size: 1.125rem;
+                font-weight: 600;
+                font-weight: 600;
+            }
+            .contact button {
+                background-color: rgb(62, 62, 245);
+                color: aliceblue;
+                border-radius: 8px;
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+            .container{
+                width: 100%;
+            }
+            .main-section {
+                max-width: 1280px;
+                display: flex;
+                gap: 2rem;
+                padding: 0.6rem;
+                align-items: center;
+                margin: 0 auto;
+            }
+            .left {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 50%;
+                text-align: left;
+            }
+            .blue {
+                color: #6366f1;
+                font-size: 1.15rem;
+            }
+            .left h1 {
+                font-size: 3.9rem;
+            }
+            .desc {
+                font-size: 1.2rem;
+                color: var(--secondary-color);
+                width: 78%;
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 20px;
+            }
+            .start,
+            .tour {
+                width: 138px;
+                height: 48px;
+                padding: 0.5rem 1.2rem;
+                font-weight: 600;
+                font-size: 1rem;
+                border-radius: 10px;
+                color: aliceblue;
+            }
+            .start {
+                background-color: var(--primary-color);
+            }
+            .tour {
+                background-color: #555555;
+            }
+            .right {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .main-image {
+                height: 500px;
+                width: 400px;
+                background-image: url(./images/usgs-hoS3dzgpHzw-unsplash.jpg);
+                /* object-fit: contain; */
+                background-size: 100% 100%;
+                border-radius: 1.225rem;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .companies {
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .companies h2 {
+                font-size: 2.3rem;
+                font-weight: bold;
+            }
+            .companies-logos {
+                border-radius: 10px;
+                margin: 2rem;
+                padding: 1.8rem 2.5rem;
+                background-color: #f0f0f0;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 3.6rem;
+            }
+            .companies-logos span img {
+                height: 1.56rem;
+            }
+            .companies-logos span {
+                font-size: 1rem;
+            }
+            .logos {
+                display: flex;
+                gap: 10px;
+            }
+            .advantages {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 0 2rem;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .advantages h2 {
+                font-size: 2.2rem;
+                font-weight: bold;
+            }
+            .advantages > p {
+                color: #808080;
+                font-size: 1rem;
+                text-align: center;
+            }
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 20px;
+            }
+            @media screen and (max-width:786px){
+                .card-container {
+                    grid-template-columns: repeat(1,1fr);
+                } 
+            }
+            .card-container .card .img-container {
+                background-color: white;
+                height: 3rem;
+                width: 3rem;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .card-container .card img {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            .card-container .card {
+                padding: 1.6rem;
+                border-radius: 1rem;
+                color: white;
+                background-color: #4a90e2;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+            }
+            .card-container .card h4 {
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+        </style>
+        <title>StudySync</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="#logo">
+                    <img src="./images/StudySyn.svg" alt="" width="50px" />
+                    <span>StudySync</span>
+                </a>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Features</a>
+                    </li>
+                    <li>
+                        <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact">
+                <button>Contact Us</button>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="main-section">
+                    <div class="left">
+                        <p class="blue">Very proud to introduce</p>
+                        <h1>Seamless Learning for Brighter Futures</h1>
+                        <p class="desc">
+                            Our innovative platform offers an effortless and
+                            seamless approach to learning, empowering students
+                            of all ages to achieve brighter futures. Join us on
+                            a transformative journey to simplify education and
+                            unlock your .
+                        </p>
+                        <div class="buttons">
+                            <button class="start">Start Now</button>
+                            <button class="tour">Take Tour</button>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="main-image"></div>
+                    </div>
+                </div>
+                <div class="companies">
+                    <h2>Trusted by the best</h2>
+                    <div class="companies-logos">
+                        <span class="logos"
+                            ><img
+                                src="./images/Google.svg"
+                                alt="Google"
+                            />Google</span
+                        >
+                        <span class="logos"
+                            ><img
+                                src="./images/Microsoft.svg"
+                                alt="Microsoft"
+                            />Microsoft</span
+                        >
+                        <span class="logos"
+                            ><img
+                                src="./images/linkedin.svg"
+                                alt="linkedin"
+                            />Linkedin</span
+                        >
+                        <span class="logos"
+                            ><img
+                                src="./images/VectorEdu.svg"
+                                alt="vector"
+                            />VectorEdu</span
+                        >
+                    </div>
+                </div>
+                <div class="advantages">
+                    <h2>Our competitive advantage</h2>
+                    <p>
+                        This is a section of some simple filler text, also known
+                        as placeholder text. It shares some characteristics of
+                        real written text but is random or otherwise generated.
+                    </p>
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="img-container">
+                                <img
+                                    src="./images/PersonalizedLearn.svg"
+                                    alt="learning"
+                                />
+                            </div>
+                            <h4>Personalized Learning</h4>
+                            <p>
+                                Offer tailored learning experiences through AI
+                                and machine learning to cater to individual
+                                student needs.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <div class="img-container">
+                                <img
+                                    src="./images/PersonalizedLearn.svg"
+                                    alt="learning"
+                                />
+                            </div>
+                            <h4>Personalized Learning</h4>
+                            <p>
+                                Offer tailored learning experiences through AI
+                                and machine learning to cater to individual
+                                student needs.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <div class="img-container">
+                                <img
+                                    src="./images/PersonalizedLearn.svg"
+                                    alt="learning"
+                                />
+                            </div>
+                            <h4>Personalized Learning</h4>
+                            <p>
+                                Offer tailored learning experiences through AI
+                                and machine learning to cater to individual
+                                student needs.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <div class="img-container">
+                                <img
+                                    src="./images/PersonalizedLearn.svg"
+                                    alt="learning"
+                                />
+                            </div>
+                            <h4>Personalized Learning</h4>
+                            <p>
+                                Offer tailored learning experiences through AI
+                                and machine learning to cater to individual
+                                student needs.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <div class="img-container">
+                                <img
+                                    src="./images/PersonalizedLearn.svg"
+                                    alt="learning"
+                                />
+                            </div>
+                            <h4>Personalized Learning</h4>
+                            <p>
+                                Offer tailored learning experiences through AI
+                                and machine learning to cater to individual
+                                student needs.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <div class="img-container">
+                                <img
+                                    src="./images/PersonalizedLearn.svg"
+                                    alt="learning"
+                                />
+                            </div>
+                            <h4>Personalized Learning</h4>
+                            <p>
+                                Offer tailored learning experiences through AI
+                                and machine learning to cater to individual
+                                student needs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
